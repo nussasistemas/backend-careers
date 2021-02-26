@@ -28,7 +28,7 @@ O sistema foi desenvolvido utilizando o framework Symfony (PHP). Para o devido f
 
 ## Instruções sobre a instalação
 
-- Passo 1: faça um clone do repositório: https://github.com/nussasistemas/talentify.git
+- Passo 1: faça um clone do repositório: https://github.com/nussasistemas/backend-careers
 - Passo 2: crie um usuário no banco de dados MySQL com permissões plenas de criação de um banco de dados.
 - Passo 3: crie um banco de dados com nome à sua escolha.
 - Passo 4: de posse do username, password e banco de dados criados no MySQL, altere as informações dentro do arquivo '.env' na raiz '/' do sistema
