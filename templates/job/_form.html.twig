@@ -1,0 +1,46 @@
+{{ form_start(form) }}
+    <div class="row">
+        <div class="col-md-6">
+            <label for="{{ form.title.vars.id }}"
+                class="{{ form.title.vars.required ? 'required' : '' }}">
+                {{ form_label(form.title, 'Title') }}
+            </label>
+            {{ form_widget(form.title, { 'attr': {'class': 'form-control'} }) }}
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="{{ form.salary.vars.id }}"
+                        class="{{ form.salary.vars.required ? 'required' : '' }}">
+                        {{ form_label(form.salary, 'Salary') }}
+                    </label>
+                    {{ form_widget(form.salary, { 'attr': {'class': 'form-control', 'step':'0.01'}, 'type' : 'number' }) }}
+                </div>
+                <div class="col-md-6">
+                    <label for="{{ form.status.vars.id }}"
+                        class="{{ form.status.vars.required ? 'required' : '' }}">
+                        {{ form_label(form.status, 'Status') }}
+                    </label>
+                    {{ form_widget(form.status, { 'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <label for="{{ form.workplace.vars.id }}"
+                class="{{ form.workplace.vars.required ? 'required' : '' }}">
+                {{ form_label(form.workplace, 'Workplace') }}
+            </label>
+            {{ form_widget(form.workplace, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        <div class="col-md-6">
+            <label for="{{ form.description.vars.id }}"
+                class="{{ form.description.vars.required ? 'required' : '' }}">
+                {{ form_label(form.description, 'Description') }}
+            </label>
+            {{ form_widget(form.description, { 'attr': {'class': 'form-control','rows' : '8'} }) }}
+        </div>
+    </div>
+    
+    
+    
+    <button class="btn">{{ button_label|default('Save') }}</button>
+    {{ include('job/_back_link.html.twig') }}
+    
+{{ form_end(form) }}

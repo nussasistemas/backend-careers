@@ -1,0 +1,37 @@
+{% extends 'public.html.twig' %}
+
+{% block title %}Job opportunities{% endblock %}
+
+{% block body %}
+    
+    <div class="text-center">
+    <h1>Job opportunities</h1>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Workplace</th>
+                <th>Salary</th>
+            </tr>
+        </thead> 
+        <tbody>
+        {% for job in jobs %}
+            <tr>
+                <td>{{ job.id }}</td>
+                <td>{{ job.title }}</td>
+                <td>{{ job.description }}</td>
+                <td>{{ job.workplace }}</td>
+                <td>{{ job.salary }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Sorry! No opportunities found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
